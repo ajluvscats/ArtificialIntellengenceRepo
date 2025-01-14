@@ -7,8 +7,8 @@ using UnityEngine;
 public struct Link
 {
     public enum direction { Uni,Bi }
-    public GameObject nodel1;
-    public GameObject nodel2;
+    public GameObject node1;
+    public GameObject node2;
     public direction dir;
 }
 public class WpManager : MonoBehaviour
@@ -26,7 +26,7 @@ public class WpManager : MonoBehaviour
             {
                 graph.AddNode(wp);
             }
-            foreach (Link 1 in Links)
+            foreach (Link l in links)
             {
                 graph.AddEdge(wp);
             }
@@ -35,7 +35,7 @@ public class WpManager : MonoBehaviour
                 graph.AddEdge(l.node1, l.node2);
                 if(l.dir == Link.direction.Bi)
                 {
-                    graph.AddEdge(l.nodel2, l.nodel1);
+                    graph.AddEdge(l.node2, l.node1);
                 }
             }
         }

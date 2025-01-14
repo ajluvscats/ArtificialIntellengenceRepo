@@ -14,8 +14,8 @@ public class FollowWP : MonoBehaviour
     public GameObject wpManager;
     GameObject[] wps;
     GameObject currentNode;
-    int currentWP = 0;
-    Graph g;;
+    
+    Graph g;
     
     // Start is called before the first frame update
     void Start()
@@ -31,9 +31,9 @@ public class FollowWP : MonoBehaviour
         currentWP = 0;
     }
 
-    pblic void GoToRuin()
+    public void GoToRuin()
     {
-        g.AStar(currentNode, wps[1]):
+        g.AStar(currentNode, wps[1]);
             currentWP = 0;
     }
     // Update is called once per frame
